@@ -1,4 +1,4 @@
-const { Engine, Render, Runner, World, Bodies } = Matter;
+const { Engine, Render, Runner, Composite, Bodies } = Matter;
 
 const engine = Engine.create();
 const { world } = engine;
@@ -16,4 +16,4 @@ Runner.run(Runner.create(), engine);
 const shape = Bodies.rectangle(200, 200, 50, 50, {
   isStatic: true
 });
-World.add(world, shape);
+Composite.add(world, shape);
